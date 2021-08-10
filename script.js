@@ -26,7 +26,7 @@ function exibirResultado(imc) {
     else if (imc <= 29.9) {status = 'Acima do peso'} 
     else if (imc <= 34.9) {status = 'Obesidade grau I'} 
     else if (imc <= 39.9) {status = 'Obesidade grau II'} 
-    else if (imc <= 40) {status = 'Obesidade grau III'} 
+    else if (imc >= 40) {status = 'Obesidade grau III'} 
     else {
         alert("ATENÇÃO: OS CAMPOS NÃO FORAM PREENCHIDOS CORRETAMENTE. CERTIFIQUE-SE DE COLOCAR APENAS NÚMEROS NOS CAMPOS DE \"ALTURA\" E \"PESO\".")
         return " "
