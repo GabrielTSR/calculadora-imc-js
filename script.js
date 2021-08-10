@@ -28,7 +28,8 @@ function exibirResultado(imc) {
     else if (imc <= 39.9) {status = 'Obesidade grau II'} 
     else if (imc <= 40) {status = 'Obesidade grau III'} 
     else {
-        return alert("ATENÇÃO: OS CAMPOS NÃO FORAM PREENCHIDOS CORRETAMENTE. CERTIFIQUE-SE DE COLOCAR APENAS NÚMEROS NOS CAMPOS DE \"ALTURA\" E \"PESO\"")
+        alert("ATENÇÃO: OS CAMPOS NÃO FORAM PREENCHIDOS CORRETAMENTE. CERTIFIQUE-SE DE COLOCAR APENAS NÚMEROS NOS CAMPOS DE \"ALTURA\" E \"PESO\".")
+        return " "
     }
     status = nome.value + ", seu IMC é igual a " +
         imc + ", " + status
