@@ -11,9 +11,8 @@ function calcularImc() {
     const imc = (peso.value / Math.pow(altura.value, 2)).toFixed(2)
 
     let resultado = document.getElementById("resultado")
-    resultado.innerHTML = exibirResultado(imc)
 
-    exibirResultado(imc)
+    resultado.innerHTML = exibirResultado(imc)
 
 
 
