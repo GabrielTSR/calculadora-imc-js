@@ -12,13 +12,13 @@ function calcularImc() {
 
     let resultado = document.getElementById("resultado")
 
-    resultado.innerHTML = exibirResultado(imc)
+    resultado.innerHTML = exibirResultado(imc, nome.value)
 
 
 
 }
 
-function exibirResultado(imc) {
+function exibirResultado(imc, nome) {
     let status
     let classImc
 
@@ -50,7 +50,14 @@ function exibirResultado(imc) {
         alert("ATENÇÃO: OS CAMPOS NÃO FORAM PREENCHIDOS CORRETAMENTE. CERTIFIQUE-SE DE COLOCAR APENAS NÚMEROS NOS CAMPOS DE \"ALTURA\" E \"PESO\".")
         return " "
     }
-    status = `${nome.value}, seu IMC é igual a <span class="imc ${classImc}">${imc}</span> ${status}`
+
+    if (nome === '') {
+        status = `Seu IMC é igual a <span class="imc ${classImc}">${imc}</span> ${status}`
+    } else {
+        status = `${nome}, seu IMC é igual a <span class="imc ${classImc}">${imc}</span> ${status}`
+    }
+
+
 
     return status
 }
