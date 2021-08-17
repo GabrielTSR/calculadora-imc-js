@@ -20,19 +20,37 @@ function calcularImc() {
 
 function exibirResultado(imc) {
     let status
+    let classImc
 
-    if (imc < 18.5) {status = 'Abaixo do peso'} 
-    else if (imc <= 24.9) {status = 'Peso ideal!'} 
-    else if (imc <= 29.9) {status = 'Acima do peso'} 
-    else if (imc <= 34.9) {status = 'Obesidade grau I'} 
-    else if (imc <= 39.9) {status = 'Obesidade grau II'} 
-    else if (imc >= 40) {status = 'Obesidade grau III'} 
-    else {
+    if (imc < 18.5) {
+        status = 'Abaixo do peso'
+        classImc = 'imc-red'
+
+    } else if (imc <= 24.9) {
+        status = 'Peso ideal!'
+        classImc = 'imc-blue'
+
+    } else if (imc <= 29.9) {
+        status = 'Acima do peso'
+        classImc = 'imc-yellow'
+
+    } else if (imc <= 34.9) {
+        status = 'Obesidade grau I'
+        classImc = 'imc-red'
+
+    } else if (imc <= 39.9) {
+        status = 'Obesidade grau II'
+        classImc = 'imc-red'
+
+    } else if (imc >= 40) {
+        status = 'Obesidade grau III'
+        classImc = 'imc-red'
+
+    } else {
         alert("ATENÇÃO: OS CAMPOS NÃO FORAM PREENCHIDOS CORRETAMENTE. CERTIFIQUE-SE DE COLOCAR APENAS NÚMEROS NOS CAMPOS DE \"ALTURA\" E \"PESO\".")
         return " "
     }
-    status = nome.value + ", seu IMC é igual a " +
-        imc + ", " + status
+    status = `<p>${nome.value} , seu IMC é igual a <span class="${classImc}">${imc}</span>, ${status}</p>`
 
     return status
 }

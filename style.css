@@ -166,3 +166,18 @@ button:hover {
     cursor: pointer;
     transition: all 400ms;
 }
+
+.imc-red {
+    font-size: 1.3rem;
+    color: red;
+}
+
+.imc-blue {
+    font-size: 1.3rem;
+    color: blue;
+}
+
+.imc-yellow {
+    font-size: 1.3rem;
+    color: rgb(130, 140, 4);
+}
