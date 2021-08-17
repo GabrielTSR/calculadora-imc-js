@@ -50,7 +50,7 @@ function exibirResultado(imc) {
         alert("ATENÇÃO: OS CAMPOS NÃO FORAM PREENCHIDOS CORRETAMENTE. CERTIFIQUE-SE DE COLOCAR APENAS NÚMEROS NOS CAMPOS DE \"ALTURA\" E \"PESO\".")
         return " "
     }
-    status = `<p>${nome.value} , seu IMC é igual a <span class="${classImc}">${imc}</span>, ${status}</p>`
+    status = `${nome.value}, seu IMC é igual a <span class="imc ${classImc}">${imc}</span> ${status}`
 
     return status
 }
