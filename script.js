@@ -1,6 +1,3 @@
-const buttonCalcular = document.querySelector("#calcularButton")
-buttonCalcular.addEventListener("click", calcularImc);
-
 function calcularImc() {
 
     const nome = document.getElementById("nome")
@@ -12,13 +9,11 @@ function calcularImc() {
 
     let resultado = document.getElementById("resultado")
 
-    resultado.innerHTML = exibirResultado(imc, nome.value)
-
-
+    resultado.innerHTML = classificarIMC(imc, nome.value)
 
 }
 
-function exibirResultado(imc, nome) {
+function classificarIMC(imc, nome) {
     let status
     let classImc
 
@@ -61,3 +56,6 @@ function exibirResultado(imc, nome) {
 
     return status
 }
+
+const buttonCalcular = document.querySelector("#calcularButton")
+buttonCalcular.addEventListener("click", calcularImc);
